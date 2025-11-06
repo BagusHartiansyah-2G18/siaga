@@ -1,12 +1,14 @@
 import admin, { ServiceAccount } from 'firebase-admin';
 import { getFirestore } from 'firebase-admin/firestore';
-import serviceAccount from '../../firebase-service-account.json';
+// import serviceAccount from '../../firebase-service-account.json';
+import { keyFSA as serviceAccount } from "@/lib/Lcript";
 import { NextRequest } from 'next/server';
 import { Ixadmin, Ixuser,Iuser } from '@/types';
 
 
 
-if (!admin.apps.length) {
+if (!admin.apps.length) { 
+  
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount as ServiceAccount),
   });

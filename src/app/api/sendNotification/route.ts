@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import admin, { ServiceAccount } from "firebase-admin";
 import { getFirestore } from "firebase-admin/firestore";
-import serviceAccount from "../../../../firebase-service-account.json";
+// import serviceAccount from "../../../../firebase-service-account.json";
+import { keyFSA as serviceAccount } from "@/lib/Lcript";
 
 // Init Firebase Admin
 if (!admin.apps.length) {

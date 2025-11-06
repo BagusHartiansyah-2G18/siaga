@@ -14,6 +14,7 @@ export default function Home() {
       if(user!=null && typeof user =="object" && user.id!=""){
           router.replace('/dashboard');
       }
+     
     // const unsubscribe = onAuthStateChanged(authUser, (user) => {
     //   if (user) { 
     //     router.replace('/dashboard');
